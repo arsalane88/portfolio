@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AM Software Development Portfolio</title>
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/e43420584b.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Top</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Languages</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+                </ul>
+                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <h1>Hi, I'm Arsalane Melaine, <br>A student of Software Development, <br>residing in the UK</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/test_pic_2.png">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About</h1>
+                    <p>I am a 36-year-old individual of Algerian origin. I have constructed this portfolio page and below, I am showcasing three projects that I have put together during a twelve-week skills boot camp that I took part in. Given that I am completely new to coding, I thought it would be wise to use this opportunity to soak in as much knowledge as possible. For the two HTML, CSS and JavaScript projects (Portfolio and Snake), I have benefited greatly from online tutorials which have helped me to widen my horizons and become acquainted with possibilities I would have never thought of myself at this early stage. I have immersed myself in these tutorials and used what I have learned as a springboard to personalize, adapt and expand on knowledge gained. In contrast, we were provided with project briefs for the Databases and Python projects so I made the choice to mostly sticking to that and execute given tasks in a step-by-step fashion. The class tasks we were asked to accomplish before attempting the projects involved more intricate data manipulation and can be made available on request.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Aspirations</p>
+                        <p class="tab-links" onclick="opentab('education')">Recent Education</p>
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Junior Devleloper Role</span><br>I will apply for entry-level employment after graduating from the skills boot camp.</li>
+                            <li><span>Level 4 Apprenticeship</span><br>Alternatively, I will be attempting to secure an apprentice role.</li>
+                            <li><span>AI Gaming Developer/Engineer</span><br>After gaining the necessary skills and experience, I would like to ultimately be involved in AI and gaming.</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>06/2024 - 09/2024</span><br>Level 3 Software Development Skills Bootcamp</li>
+                            <li><span>04/2024 - 05/2024</span><br>Level 2 Certificate in Digital Technologies</li>
+                            <li><span>03/2024 - 04/2024</span><br>Level 2 Certificate in Team Leading Principles</li>
+                            <li><span>03/2024 - 04/2024</span><br>Level 1 Award in Customer Service</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">Languages</h1>
+        <div class="services-list">
+            <div>
+                <i class="fa-brands fa-html5"></i>
+                <h2>HTML</h2>
+            </div>
+            <div>
+                <i class="fa-brands fa-css3-alt"></i>
+                <h2>CSS</h2>
+            </div>
+            <div>
+                <i class="fa-brands fa-js"></i>
+                <h2>JavaScript</h2>
+            </div>
+            <div>
+                <i class="fa-solid fa-database"></i>
+                <h2>Databases</h2>
+            </div>
+            <div>
+                <i class="fa-brands fa-python"></i>
+                <h2>Python</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/snake_sceenshot.png">
+                <div class="layer">
+                    <h3>Snake Game</h3>
+                    <p>This project is a basic snake game put together using HTML, CSS and JavaScript. Click the link icon below to play.</p>
+                    <a href="https://arsalane88.github.io/snake_game/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/ecommerce_database_screenshot.png">
+                <div class="layer">
+                    <h3>eCommerce Database</h3>
+                    <p>This project is an ecommerce database. Click the icon below to download.</p>
+                    <a href="files/Arsalane_Melaine_eCommerceDB.sql"><i class="fa-solid fa-download"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/weather_app_screenshot.png">
+                <div class="layer">
+                    <h3>Python Weather App</h3>
+                    <p>This project is a Python weather app. Click the icon below to download.</p>
+                    <a href="files/main.py"><i class="fa-solid fa-download"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact</h1>
+                <p><i class="fa-regular fa-paper-plane"></i> melainea88@gmail.com</p>
+                <p><i class="fa-solid fa-phone"></i> 07478752610</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/arsalane-melaine-78263830a/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/arsalane88"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="files/Arsalane Melaine CV.doc" download class="btn1 btn2">Download CV</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="text" name="Email" placeholder="Your Email" required>
+                    <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn1 btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Made by Arsalane Melaine with <i class="fa-regular fa-heart"></i> and plenty of help. 2024</p>
+    </div>
+</div>
+
+<script>
+
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents"); // variables created and linked with classes.
+
+function opentab(tabname){ 
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    } // for loop iterates over each element within tablinkss and removes "active-link"
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    } // for loop iterates over each element within tabcontents and removes "active-tab" 
+    event.currentTarget.classList.add("active-link"); // "active-link" is added
+    document.getElementById(tabname).classList.add("active-tab"); // "active-tab is added"
+} // this function works with html & css to ensure that only the clicked links tab will be visible
+
+</script>
+
+<script>
+
+    var sidemenu = document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemenu.style.right = "0";
+    }
+    function closemenu(){
+        sidemenu.style.right = "-200px";
+    } // this function ensures that the mobile side nav corresponds when open and close icons are clicked.
+
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbyaM2X0nwAv9KMOVei3TF8JAEbD5MALDDCbAN925OmYXVSgB2fNJOEFySRVFlw68-oU/exec' // url for borrowed code
+    const form = document.forms['submit-to-google-sheet'] // const to connect my form to google sheet
+    const msg = document.getElementById("msg") // msg id in html and css made a const
+  
+    form.addEventListener('submit', e => { // event listener addedto form listening for a submission
+      e.preventDefault() // default page reload on submission is prevented
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)}) // post request sent to scriptURL using input data
+        .then(response => {
+            msg.innerHTML = "Message Received. Thank You" // if successful, msg is displayed under the form
+            setTimeout(function(){
+                msg.innerHTML = ""
+            },4000)
+            form.reset() // msg disapears after 4 seconds using setTimeout function
+        })
+        .catch(error => console.error('Error!', error.message)) // if an error is caught, the error message will be displayed
+    })
+  </script>
+
+</body>
+</html>

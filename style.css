@@ -1,0 +1,388 @@
+*{ /* universal selector */
+    margin: 0;
+    padding: 0; /* removes default */
+    color: rgb(68, 146, 16);
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box; /* box-model is altered to include padding and border to width and height */
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    background: #550303;
+}
+#header{
+    width: 100%;
+    height: 90vh; /* 90% of viewport height */
+    background-image: url("images/background_img.png");
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    padding: 10px 10%; /* top and bottom 10px. left & right 10% */
+}
+nav{
+    display: flex; /* flexbox enabled */
+    align-items: center; /* vertically */
+    justify-content: space-between; /* flex items given equal space between horizontally */
+    flex-wrap: wrap; /* items will wrap below if necessary */
+    position: fixed; /* nav will remain at top of viewport when scrolling down */
+    background-color: #550303;
+    top: 0; /* nav position at top of viewport */
+    width: 80%;
+    z-index: 1000; /* nav will appear above all elements with lower z-index */
+}
+
+.logo{
+    width: 100px;
+}
+
+nav ul li{
+    display: inline-block; /* inline = horizontal. block = retain ability to have width & height */
+    list-style: none; /* default bullet points removed from li */
+    margin: 10px 20px; /* 10px top & bottom. 20px left & right */
+}
+
+nav ul li a{
+    text-decoration: none; /* removes default <a> text-dec (underlining) */
+    color: #ecf1ee;
+    font-size: 18px;
+    position: relative; /* regular but can be altered with top, left etc */
+}
+nav ul li a::after{ /* ::after targets <a> when cursor is on them */
+    content: ''; /* required property for after. '' = invisible */
+    width: 0; /* initial width set */
+    height: 3px; /* thickness of underline animation */
+    background: #017c26;
+    position: absolute; /* relative to <a> (parent) */
+    left: 0; /* after positioned to left most point of <a> */
+    bottom: -6px; /* after will be 6px under <a> */
+    transition: 0.5s ease; /* underline animation (after) will take 0.5 seconds. ease makes it smooth */
+}
+nav ul li a:hover::after{
+    width: 100%; /* animation is activated when cursor hovers over <a>. Width changes from 0 - 100% with all above ::after properties */
+}
+.header-text h1{
+    font-size: 30px;
+    margin-top: 20%;
+    color: #fff;
+    text-align: center;
+}
+
+#about{
+    padding: 80px 0;
+    color: #ababab;
+}
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.about-col-1{
+    padding-top: 40px;
+    flex-basis: 35%; /* width % of about */
+}
+.about-col-1 img{
+    width: 100%;
+    border-radius: 15px;
+}
+.about-col-2{
+    flex-basis: 60%; /* width % of about */
+}
+
+.sub-title{
+    text-align: center;
+    padding-bottom: 20px;
+    font-size: 60px;
+    font-weight: 600; /* 100-900. light-bold */
+    color: #e7e1e2
+}
+
+.tab-titles{
+    display: flex;
+    margin: 20px 0 40px; /* top = 20px. right = 0. bottom = 40px. left = 0 */
+}
+.tab-links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #e7e1e2;
+    cursor: pointer;
+    position: relative;
+}
+.tab-links::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #017c26;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after{
+    width: 75%; /* 3 quarter underline animation when clicked */
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+}
+.tab-contents ul li span{
+    color: #e7e1e2;
+    font-size: 15px;
+}
+.tab-contents{
+    display: none; /* invisible */
+}
+.tab-contents.active-tab{
+    display: block; /* tab-contents becomes visible as block when clicked (enabled by js function) */
+}
+
+
+#services{
+    padding: 30px 0;
+}
+.services-list{
+    display: grid; /* grid layout enabled */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* columns of within grid given same (repeat function) properties. auto-fit keyword = columns will fill whole container, and wrap if necessary. min width = 250px. max width = 1 fraction of available space (all). */
+    grid-gap: 40px; /* space between grid items (v&h) */
+    margin-top: 50px;
+}
+.services-list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 13px;
+    font-weight: 300;
+    border-radius: 10px;
+    transition: background 0.5s, transform 0.5s; /* 2 below hover animation properties will take half a second to transition */
+}
+.services-list div i{
+    font-size: 50px;
+    margin-bottom: 30px;
+}
+.services-list div h2{
+    font-size: 30px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+.services-list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+.services-list div:hover{
+    background: #ff004f; 
+    transform: translateX(20px); /* function for horizontal movement */
+}
+
+#portfolio{
+    padding: 50px 0;
+}
+.work-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
+.work{
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+.work img{
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    display: block; /* ensures consistent behaviour */
+    transition: transform 0.5s;
+}
+.layer{
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0,0,0,0.6), #017c26); /* fade color effect */
+    border-radius: 10px;
+    position: absolute; /* overlap container enabled */
+    left: 0;
+    bottom: 0; /* initial position */
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* layer aligned v&h within container */
+    flex-direction: column; /* contents of layer stacked v */
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+.layer h3{
+    color: #fff;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.layer p{
+    color: #fff;
+}
+.layer a{
+    margin-top: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%; /* circle */
+    text-align: center;
+}
+.work:hover img{
+    transform: scale(1.1); /* image enlarged by 10% creating zoom affect */
+}
+.work:hover .layer{
+    height: 100%; /* layer animation on hover */
+}
+
+
+.contact-left{
+    flex-basis: 35%;
+}
+.contact-right{
+    flex-basis: 60%;
+}
+.contact-left p{
+    margin-top: 30px;
+}
+.contact-left p i{
+    color: #ff004f;
+    margin-right: 15px;
+    font-size: 25px;
+}
+.social-icons{
+    margin-top: 30px;
+}
+.social-icons a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    display: inline-block; /* icons will appear side by side */
+    transition: transform 0.5s;
+}
+.social-icons a:hover{
+    transform: translateX(5px); /* animates icons to the right */
+}
+.btn1.btn2{
+    display: inline-block;
+    margin: 50px auto;
+    width: fit-content;
+    background: #ff004f;
+    border: 1px solid #e7e1e2;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    transition: background 0.5s;
+}
+.btn1.btn2:hover{
+    background: #017c26;
+}
+.contact-right form{
+    width: 100%;
+}
+form input, form textarea{
+    width: 100%;
+    border: 0; /* removes default */
+    outline: none; /* removes default */
+    background: #262626;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+form .btn2{
+    padding: 14px 60px;
+    font-size: 18px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+.footer i{
+    color: #550303;
+}
+
+nav .fa-solid{
+    display: none; /* menu and x icons only for mobile version */
+}
+
+@media only screen and (max-width: 600px){ /* mobile queries */
+    .header-text{
+        margin-top: 70%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 30px;
+    }
+    nav .fa-solid{
+        display: block; /* v stack */
+        font-size: 25px;
+        cursor: pointer;
+    }
+    nav ul{
+        background: #ff004f;
+        position: fixed;
+        top: 0;
+        right: -200px; /* initially off screen */
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+        transition: right 0.5s;
+    }
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
+    .sub-title{
+        font-size: 40px;
+    }
+    .about-col-1, .about-col-2{
+        flex-basis: 100%;
+    }
+    .about-col-1{
+        margin-bottom: 30px;
+    }
+    .about-col-2{
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 20px;
+    }
+    .contact-left, .contact-right{
+        flex-basis: 100%;
+    }
+    .footer{
+        font-size: 14px;
+    }
+}
+#msg{
+    color: #e7e1e2;
+    margin-top: -40px;
+    display: block;
+}
